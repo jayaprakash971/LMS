@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="row">
+         <div class="col-md-4" id = "signupimg">
+         </div>
+        <div class="col-md-4 mt-3 mb-2">
+            <h3 class="text-success text-center"><b>Welcome </b></h3>
+
+            <form action="" class="mt-5 p-5">
+                <h5 class="text-primary mb-3">Sign up </h5>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="username" placeholder="Username" name="username" [(ngModel)]="username">
+                    <label for="username">Username</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="email" placeholder="Email" name="email" [(ngModel)]="email">
+                  <label for="email">Email address</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="mobile" placeholder="Mobile" name="mobile" [(ngModel)]="mobile">
+                  <label for="mobile">Mobile</label>
+                </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="password" placeholder="Password" name="password" [(ngModel)]="password">
+                    <label for="password">Password</label>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <a routerLink="/" class="text-primary" style="text-decoration: none;">Log In ? </a>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end col-md-6">
+                      <button class="btn btn-outline-success me-md-2" type="button" (click)="signup()" >Register</button>
+                    </div>
+                  </div>
+
+
+            </form>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>

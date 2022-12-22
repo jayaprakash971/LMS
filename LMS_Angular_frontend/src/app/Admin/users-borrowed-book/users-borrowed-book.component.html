@@ -1,0 +1,84 @@
+<nav class="navbar bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/admin/students">Student Lists</a>
+  </div>
+</nav>
+<div class = "container">
+  <form class="form-inline">
+    <tr>
+      <td><input style = "width: 600px;" class="form-control mr-sm-2" type="search" placeholder="Search using Student Name" name="name" aria-label="Search" [(ngModel)] = "name" (ngModelChange) = "findStudentByName()"></td>
+      <td><button class="btn btn-success my-2 my-sm-0" type="submit" (click) = "findStudentByName()">Search</button></td>
+    </tr>
+  </form>
+</div>
+<div class = "container">
+  <table class = "table table-hover table-bordered">
+    <thead>
+    <tr class = "bg-info">
+      <th>Student ID</th>
+      <th>Student Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let student of students">
+      <td>{{student.id}}</td>
+      <td>{{student.user_name}}</td>
+      <td>{{student.user_email}}</td>
+      <td>{{student.user_mobile}}</td>
+<!--      <td><button (click) = "unIssueBookToStudent(student)" class = "btn btn-danger" style = "margin-right: 10px;">UnIssue</button></td>-->
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--  <div class="modal-dialog" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLabel">Update Student</h5>-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--          <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--        <form (ngSubmit) = "updatestudent()">-->
+<!--          <div class="form-group">-->
+<!--            <label> Student Id</label>-->
+<!--            <input type="number" class ="form-control" id = "id" disabled = True-->
+<!--                   [(ngModel)] = "studentToUpdate.id" name = "id">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label> Student Name</label>-->
+<!--            <input type="text" class ="form-control" id = "name"-->
+<!--                   [(ngModel)] = "studentToUpdate.user_name" name = "name">-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <label> Student Email</label>-->
+<!--            <input type="text" class ="form-control" id = "email"-->
+<!--                   [(ngModel)] = "studentToUpdate.user_email"  name = "email">-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <label> Student Phone Number</label>-->
+<!--            <input type="text" class ="form-control" id = "phoneno"-->
+<!--                   [(ngModel)] = "studentToUpdate.user_mobile"   name = "phoneno">-->
+<!--          </div>-->
+
+<!--          <button class = "btn btn-success" type ="submit" data-dismiss="modal" (click) = "updatestudent()" onclick = "alert('Changes saved successfully');">Save Changes</button>-->
+<!--        </form>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<footer class = "footer">
+  <div class = "container">
+    <span>All Rights Reserved 2022 @Devansh</span>
+  </div>
+</footer>
+
+

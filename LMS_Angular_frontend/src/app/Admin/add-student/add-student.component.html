@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid" >
+      <a class="navbar-brand" href="/admin/add-student">Add Student</a>
+    </div>
+  </nav>
+<div class="col-md-6 offset-md-3">
+    <h3>Add Student</h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label> Student Name</label>
+            <input type="text" class ="form-control" id = "name"
+                [(ngModel)] = "student.user_name" name = "name">
+        </div>
+
+        <div class="form-group">
+            <label> Student Email</label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "student.user_email" name = "email">
+        </div>
+
+        <div class="form-group">
+            <label> Student Mobile</label>
+            <input type="text" class ="form-control" id = "mobile"
+                [(ngModel)] = "student.user_mobile" name = "mobile">
+        </div>
+
+        <div class="form-group">
+            <label> Student Password</label>
+            <input type="password" class ="form-control" id = "password"
+                [(ngModel)] = "student.user_password" name = "password">
+        </div>
+
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    </form>
+</div>
+<footer class = "footer">
+    <div class = "container">
+        <span>All Rights Reserved 2022 @Devansh</span>
+    </div>
+  </footer>
+

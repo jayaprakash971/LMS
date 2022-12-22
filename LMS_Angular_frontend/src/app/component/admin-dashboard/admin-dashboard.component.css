@@ -1,0 +1,28 @@
+.h3 {
+    text-align: center;
+}
+.img {
+    width: 18rem;
+    height: 15rem;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+h2{
+    margin-bottom: 40px;
+}
+
+#addstudent {
+    height: 11rem;
+}
+
+#liststudent {
+    height: 11rem;
+    
+}
+
+#addbooks {
+    height: 11rem;
+}

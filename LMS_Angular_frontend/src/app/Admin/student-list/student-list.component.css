@@ -1,0 +1,18 @@
+.navbar {
+    margin-bottom: 40px;
+}
+
+.container {
+    position: relative;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.form-control {
+    margin-right: 15px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,30 @@
+<nav class="navbar bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/admin/books">Issued Books</a>
+    </div>
+  </nav>
+
+<div class = "container">
+<table class = "table table-hover table-bordered">
+    <thead>
+        <tr class="bg-info">
+            <th>Book Id</th>
+            <th>Book Name</th>
+            <th>Book Author</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let issue of booksIssuedByStudent">
+            <td>{{issue.id}}</td>
+            <td>{{issue.book_name}}</td>
+            <td>{{issue.book_author}}</td>
+            <td><button (click) = "deleteBook(issue.book_name)" onclick="alert('Book Returned Successfully')" class="btn btn-outline-danger">Return Book</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<footer class = "footer">
+    <div class = "container">
+        <span>All Rights Reserved 2022 @Devansh</span>
+    </div>
+  </footer>

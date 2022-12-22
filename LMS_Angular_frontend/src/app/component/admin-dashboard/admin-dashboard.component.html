@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/admin">Welcome, Admin</a>
+  <ul class = "navbar-nav me-auto mb-2 mb-lg-0">
+      <li class = "nav-item">
+          <a routerLink="books" routerLinkActive="active" class="nav-link" >List Books</a>
+      </li>
+      <li class = "nav-item">
+          <a routerLink="add-book" routerLinkActive="active" class="nav-link" >Add Book</a>
+      </li>
+      <li class = "nav-item">
+        <a routerLink="students" routerLinkActive="active" class="nav-link" >List Student</a>
+      </li>
+      <li class = "nav-item">
+        <a routerLink="add-student" routerLinkActive="active" class="nav-link" >Add Student</a>
+    </li>
+</ul>
+    <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-success my-2 my-sm-0" (click)="logout()">Logout</button>
+    </form>
+    </div>
+</nav>
+<div class = "container">
+<router-outlet></router-outlet>
+</div>
+<h2 class = "text-center">Admin Dashboard</h2>
+<div class="container">
+<div class = "row">
+    <div class = "col-sm-3">
+    <div class="card text-center" style="width: 18rem; height: 15rem;">
+        <div class="card-body">
+            <a href = "/books"class="btn btn-outline-primary" routerLink="books" routerLinkActive="active">List Books</a>
+        </div>
+      </div>
+    </div>
+    <div class = "col-sm-3">
+    <div class="card text-center" style="width: 18rem; height: 15rem;">
+        <div class="card-body">
+            <a href = "/add-book" class="btn btn-outline-primary" routerLink="add-book" routerLinkActive="active">Add Books</a>
+        </div>
+      </div>
+    </div>
+    <div class = "col-sm-3">
+    <div class="card text-center" style="width: 18rem; height: 15rem;">
+        <div class="card-body">
+            <a href = "/students" class = "btn btn-outline-primary"  routerLink="students" routerLinkActive="active">List Students</a>
+        </div>
+      </div>
+    </div>
+    <div class = "col-sm-3">
+        <div class="card text-center" style="width: 18rem; height: 15rem;">
+            <div class="card-body">
+                <a href = "/add-student" class = "btn btn-outline-primary" routerLink="add-student" routerLinkActive="active" >Add Student</a>
+            </div>
+          </div>
+        </div>
+
+</div>
+</div>
+<footer class = "footer">
+  <div class = "container">
+      <span>All Rights Reserved 2022 @Devansh</span>
+  </div>
+</footer>

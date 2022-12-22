@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="/admin/books">Book Lists</a>
+  </div>
+</nav>
+
+<div class = "container">
+  <form class="form-inline">
+    <tr>
+      <td><input style = "width: 600px;" class="form-control mr-sm-2" type="search" placeholder="Search using Book Name" name="name" aria-label="Search" [(ngModel)] = "bookname" (ngModelChange) = "findBookByName()"></td>
+      <td><button class="btn btn-success my-2 my-sm-0" type="submit" (click) = "findBookByName()">Search</button></td>
+    </tr>
+  </form>
+</div>
+<div class = "container">
+  <table class = "table table-hover table-bordered">
+    <thead>
+    <tr class = "bg-info">
+      <th>Book ID</th>
+      <th>Book Name</th>
+      <th>Author</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let book of books">
+      <td>{{book.id}}</td>
+      <td>{{book.book_name}}</td>
+      <td>{{book.book_author}}</td>
+      <td><button class = "btn btn-outline-danger" (click)="deleteBook(book.id)" style="margin-right: 10px">Delete Book</button>
+        <button class = "btn btn-outline-danger" (click)="usersBorrowedBook(book.id)">Users Borrowed</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<footer class = "footer">
+  <div class = "container">
+    <span>All Rights Reserved 2022 @Devansh</span>
+  </div>
+</footer>

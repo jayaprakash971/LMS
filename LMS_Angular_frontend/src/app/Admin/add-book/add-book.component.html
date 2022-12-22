@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid" >
+      <a class="navbar-brand" href="/admin/add-book">Add Book</a>
+    </div>
+  </nav>
+
+<div class="col-md-6 offset-md-3">
+    <h3>Add Book</h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+            <label> Book Name</label>
+            <input type="text" class ="form-control" id = "bookname"
+                [(ngModel)] = "book.book_name" name = "bookname">
+        </div>
+
+        <div class="form-group">
+            <label> Author Name</label>
+            <input type="text" class ="form-control" id = "author"
+                [(ngModel)] = "book.book_author" name = "author">
+        </div>
+
+        <button class = "btn btn-success" onclick = "alert('Book Added Successfully');" type ="submit">Submit</button>
+    </form>
+</div>
+
+<footer class = "footer">
+    <div class = "container">
+        <span>All Rights Reserved 2022 @Devansh</span>
+    </div>
+  </footer>
